@@ -19,5 +19,9 @@
   ],
   "author": "bluntpeak",
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "dependencies": {
+    "prettyjson": "~0.7.1",
+    "express": "~3.1.0",
+    "mongodb": "~1.2.12"
+  }
 }
