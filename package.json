@@ -1,0 +1,23 @@
+{
+  "name": "node-mongo-ajax-playground",
+  "version": "0.0.0",
+  "description": "playground code fragments for hand crafted ajax served via node / express / mongo",
+  "main": "play.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bluntpeak/node-mongo-ajax-playground.git"
+  },
+  "keywords": [
+    "experiment",
+    "sample",
+    "howto",
+    "demo",
+    "ajax"
+  ],
+  "author": "bluntpeak",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+}
