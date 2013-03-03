@@ -4,7 +4,51 @@
 //
 
 
+// As always there are many different ways to structure code. I like to
+// have separate functions as much as is practicable. Many people will
+// write this exact same example using inline functions and object definitions.
+//
+// That's fine so long as you don't mind having rats nest mega indented code :)
 
+
+// Overview:
+//
+// Simply puy Ajax is a way to make an HTTP call from a browser without having
+// to reload the entire page you are already looking at.
+//
+// There are many reasons why you might want to do this but they mostly boil
+// down to two things:
+//
+// - speed
+// - user experience
+//
+// Faster equals better. Web sites can also produce more eye catching displays 
+// if they only have to update a small part of the page not reload the entire thing.
+//
+// Jquery and other quality javascript client side libraries abstract away a lot
+// of the hard work involved in setting up an ajax request. For a detailed 
+// look at raw ajax http://www.w3schools.com/ajax/default.asp
+//
+// Jqery Ajax:
+//
+// A jquery style ajax request is triggered by the $.ajax function.
+//
+// $.ajax takes a single object {} as a parameter. To setup an ajax call
+// simply create a settings object (as we will do below) pass it to the $.ajax
+// function. That's it.
+//
+// Jquery provides defaults for almost all of the many options available to 
+// control an ajax call. I like to override a key few as experience has tought me 
+// that the defaults only work about 90% of the time. It's so easy and quick to
+// detail exactly what you want that it's not worth the 10% time it will not
+// work on full auto.
+//
+// The setup below is what I consider to be the bare minimum to specify and as
+// you can see it is easy to wrap all this into a function that just takes 
+// a target URL, optional data then configures and executes the ajax call.
+//
+// There really is no reason to keep repeating all this stuff throughout the 
+// coe base - does not stop some folks though...
 
 
 var grabJsonData = function(params) {
