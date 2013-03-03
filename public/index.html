@@ -1,20 +1,73 @@
 <!doctype html>
+
+<!-- 
+
+    Very simple HTML5 'app' structure
+
+    Assumes a public file structure as follows:
+
+    /
+        css
+        js
+            vendor
+
+    For now the only files are:
+
+        css/app.css - blank css file (add stuff as needed)
+        js/app.js - our basic ajax interactions
+        js/vendor - 3rd party javascripts (in this case jquery)
+
+-->
+
 <head>
 
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="/css/app.css">
 
+<!-- 
+    In a large real life app or complex page you would try and load as many javascripts
+    as possible at the bottom of the page for maximum page load speed.
+
+    This helps because page rendering is paused whilst a javascript file is loaded. The DEFER tag
+    can also be used to help avoid this but is not browser consistent.
+
+    Other ways to 'fix' the problem include using asynchronous loader scripts such at the 
+    powerful and popular http://requirejs.org
+-->
+
     <script type="text/javascript" src="/js/vendor/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
+
+    <!-- Also note that the type='text/javascript' is no longer needed as it's now the default -->
+    <script src="/js/app.js"></script>
 
 </head>
 
 <body>
 
+    <!-- Just a page heading - nothing special -->
     <h1>Testing page</h1>
 
+<!-- 
+    This is a 'button' that we will capture click events for using jquery. When the user clicks
+    the 'button' the code in app.js will make an ajax call to our server requesting some data to
+    be displayed. This 'button' is only here to facilitate manual starting of the ajax request.
+-->
     <div id='c1'>Click to load json</div>
+
+
+<!-- 
+    An empty div element that will be used to contain the data returned via ajax. This div will 
+    have the data inserted using jquery standard dom manipulation functions.
+
+    Inserting ajax returned data 'into' an existing element is by no means the only way of 
+    displaying such returned data to the user. We could, for instance inject a whole new element
+    into the DOM and not need an empty placeholder at all.
+
+    I personally like to have the empty placeholders whenever possible as they provide a degree
+    of self documentation to the html code. This can be very helpful once a site is split into 
+    multiple template fragments and so on.
+-->
     <div id='results'></div>
 </body>
 
