@@ -1,6 +1,6 @@
 <!doctype html>
 
-<!-- 
+<!--
 
     Very simple HTML5 'app' structure
 
@@ -25,14 +25,14 @@
 
     <link rel="stylesheet" href="/css/app.css">
 
-<!-- 
+<!--
     In a large real life app or complex page you would try and load as many javascripts
     as possible at the bottom of the page for maximum page load speed.
 
     This helps because page rendering is paused whilst a javascript file is loaded. The DEFER tag
     can also be used to help avoid this but is not browser consistent.
 
-    Other ways to 'fix' the problem include using asynchronous loader scripts such at the 
+    Other ways to 'fix' the problem include using asynchronous loader scripts such at the
     powerful and popular http://requirejs.org
 -->
 
@@ -46,9 +46,10 @@
 <body>
 
     <!-- Just a page heading - nothing special -->
+    <!-- test change to file for webstorm eval -->
     <h1>Testing page</h1>
 
-<!-- 
+<!--
     This is a 'button' that we will capture click events for using jquery. When the user clicks
     the 'button' the code in app.js will make an ajax call to our server requesting some data to
     be displayed. This 'button' is only here to facilitate manual starting of the ajax request.
@@ -56,16 +57,16 @@
     <div id='c1'>Click to load json</div>
 
 
-<!-- 
-    An empty div element that will be used to contain the data returned via ajax. This div will 
+<!--
+    An empty div element that will be used to contain the data returned via ajax. This div will
     have the data inserted using jquery standard dom manipulation functions.
 
-    Inserting ajax returned data 'into' an existing element is by no means the only way of 
+    Inserting ajax returned data 'into' an existing element is by no means the only way of
     displaying such returned data to the user. We could, for instance inject a whole new element
     into the DOM and not need an empty placeholder at all.
 
     I personally like to have the empty placeholders whenever possible as they provide a degree
-    of self documentation to the html code. This can be very helpful once a site is split into 
+    of self documentation to the html code. This can be very helpful once a site is split into
     multiple template fragments and so on.
 -->
     <div id='results'></div>
